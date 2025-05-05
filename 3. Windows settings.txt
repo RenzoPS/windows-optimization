@@ -1,0 +1,63 @@
+---------------- SISTEMA ---------------- 
+- Notificaciones y acciones: Notifications
+- Focus assist: Focus asisst
+- Multi tasking: Timeline
+- Shared Experiences: Share across devices
+- Clipboard: Clipboard history, Sync across devices
+- Remote Desktop: Enable remote desktop
+
+
+---------------- MOBILE DEVICES ---------------- 
+- Mobile devices: All off
+
+
+
+---------------- PRIVACY ---------------- 
+- General: Change privacy options (All off)   (Allow webistes to provide locally relevant content by accessing my language list)
+- Spech: Online speech recognition
+- Inking & typing personalisation: Getting to know you
+- Diagnostics & feedback: All off
+- Activy history: Store my activity history on this device (off)
+- Location: All off
+- Notifications: Change off
+- Account info: Change off
+- Contacts: Change off
+- Calender: Change off
+- Phone calls: Change off
+- Call history: Change off
+- Email: Change off
+- Tasks: Change off
+- Messaging: Change off
+- Radios: Change off
+- Background apps: Let apps run in the background (off)
+- App diagnostics: Change off
+
+
+
+---------------- PERSONALISATION ---------------- 
+- Colours: Transparency effects (off)
+- Lock screen: All off
+- Start: All off
+- Taskbar: Show news and interests appears on the taskbar (off)
+
+
+
+
+---------------- GAMING ---------------- 
+- Game bar: Off
+- Captures: Background recording (off)
+- Game mode: Off
+
+
+
+
+---------------- SEARCH ---------------- 
+- Permissions & History: Microsoft account - Work of school account - Search history on this device
+- Searching Windows: Indexer Performance (off)
+
+
+
+
+---------------- UPDATE & SECURITY ---------------- 
+- Delivery optimisation: Allow downloads from other PCs (off) - Advanced options: All in minium
+- For developers: Developer Mode - Device portal - Device discovery

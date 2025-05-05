@@ -1,0 +1,6 @@
+RUN ON THE POWERSHELL
+
+irm https://get.activated.win | iex
+
+OPTION 1: ACTIVATE WINDOWS
+OPTION 2: ACTIVATE OFFICE

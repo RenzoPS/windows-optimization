@@ -1,0 +1,5 @@
+RUN ON POWERSHELL
+
+& ([scriptblock]::Create((irm "https://debloat.raphi.re/")))
+
+OPTION 3
