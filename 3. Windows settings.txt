@@ -1,5 +1,5 @@
----------------- SISTEMA ---------------- 
-- Notificaciones y acciones: Notifications
+---------------- SISTEM ---------------- 
+- Notifications & actions: Notifications
 - Focus assist: Focus asisst
 - Multi tasking: Timeline
 - Shared Experiences: Share across devices
