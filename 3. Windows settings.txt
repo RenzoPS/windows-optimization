@@ -34,7 +34,7 @@
 
 
 
----------------- PERSONALISATION ---------------- 
+---------------- PERSONALIZATION ---------------- 
 - Colours: Transparency effects (off)
 - Lock screen: All off
 - Start: All off
