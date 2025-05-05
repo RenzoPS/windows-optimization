@@ -66,10 +66,6 @@ echo Cleaning Chrome's cache...
 del /s /f /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache\*" >nul 2>&1
 del /s /f /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Code Cache\*" >nul 2>&1
 
-:: ELIMINACIÓN SEGURA DE DRIVERS ANTIGUOS
-echo Deleting obsolete drivers...
-powershell -Command "Get-WmiObject Win32_PnPSignedDriver | Where-Object { $_.DriverProviderName -ne $null -and $_.DriverDate -lt (Get-Date).AddMonths(-6) } | ForEach-Object { pnputil /delete-driver $('oem' + $_.OEMINF.Split('\\')[-1]) /uninstall /force }" >nul 2>&1
-
 echo ===============================
 echo CLEANING COMPLETED SUCCESSFULLY.
 echo ===============================
