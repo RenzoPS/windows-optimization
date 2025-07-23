@@ -1,0 +1,4 @@
+1- Windows Logs
+2- Right click in Application, Security, Setup, System:
+	Clear Log
+	

@@ -31,10 +31,11 @@
 - Radios: Change off
 - Background apps: Let apps run in the background (off)
 - App diagnostics: Change off
+- Other devices: Chanfe off
 
 
 
----------------- PERSONALIZATION ---------------- 
+---------------- PERSONALISATION ---------------- 
 - Colours: Transparency effects (off)
 - Lock screen: All off
 - Start: All off

@@ -1,0 +1,5 @@
+Disable Windows Update
+1- Right click on Windows Update:
+	- Stop
+	- Properties:
+		Startup type: Disabled
