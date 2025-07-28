@@ -200,7 +200,7 @@ timeout /t 1
 
 @REM Delete all the files in temp directory
 echo Removing temp files
-rd /s /q %windir%\temp & md %windir%\temp 
+rd /s /q %windir%\temp & md %windir%\temp
 timeout /t 1
 
 @REM Delete all the stored cookies in the system drive
@@ -223,6 +223,20 @@ echo Removing history files
 del /f /s /q "%userprofile%\local settings\history\*.*"
 timeout /t 1
 
+@REM Delete Used Drivers Files (Not needed because already installed) // MADE BY ME
+echo Removing used drivers files
+del /s /f /q %SYSTEMDRIVE%\AMD\*.*
+del /s /f /q %SYSTEMDRIVE%\NVIDIA\*.*
+del /s /f /q %SYSTEMDRIVE%\INTEL\*.*
+timeout /t 1
+
+@REM Delete Used Drivers Folders (Not needed because already installed) // MADE BY ME
+echo Removing used drivers folders
+rd /s /q %SYSTEMDRIVE%\AMD
+rd /s /q %SYSTEMDRIVE%\NVIDIA
+rd /s /q %SYSTEMDRIVE%\INTEL
+timeout /t 1
+
 @REM Repair System Image (used by sfc /scannow to fix corrupted files)
 echo Repairing System Image (using Windows Update if needed)
 dism /Online /Cleanup-Image /RestoreHealth
@@ -243,11 +257,11 @@ echo Clearing the windows run history
 timeout /t 1
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU" /f
 
-@REM @REM Delete all the files in the temp directory
-@REM echo Finally removing the temp_directory
-@REM echo Removing local_settings__temp files
-@REM del /f /s /q "%userprofile%\local settings\temp\*.*"
-@REM timeout /t 1
+@REM Delete all the files in the temp directory
+echo Finally removing the temp_directory
+echo Removing local_settings__temp files
+del /f /s /q "%userprofile%\local settings\temp\*.*"
+timeout /t 1
 
 @REM Start explorer.exe only if it is not running
 echo Starting explorer.exe
@@ -269,7 +283,7 @@ del /f /s /q %systemdrive%\*.tmp
 rd /s /q %windir%\temp & md %windir%\temp 
 del /f /s /q "%userprofile%\recent\*.*"
 del /f /s /q "%userprofile%\local settings\history\*.*"
-@REM del /f /s /q "%userprofile%\local settings\temp\*.*"
+del /f /s /q "%userprofile%\local settings\temp\*.*"
 del /f /s /q %windir%\prefetch\*.* 
 timeout /t 5
 echo Done!
@@ -554,16 +568,18 @@ echo [1] Clear Google Chrome cache and cookies
 echo [2] Clear Mozilla Firefox cache and cookies
 echo [3] Clear Microsoft Edge cache and cookies
 echo [4] Clear Opera cache and cookies
-echo [5] Clear all browser cache and cookies
-echo [6] Back to main menu
+echo [5] Clear Brave cache and cookies
+echo [6] Clear all browser cache and cookies
+echo [7] Back to main menu
 echo.
 set /p browser=Enter your choice: 
 if "%browser%"=="1" goto CLEAR-CHROME
 if "%browser%"=="2" goto CLEAR-FIREFOX
 if "%browser%"=="3" goto CLEAR-EDGE
 if "%browser%"=="4" goto CLEAR-OPERA
-if "%browser%"=="5" goto CLEAR-ALL
-if "%browser%"=="6" goto MENU
+if "%browser%"=="5" goto CLEAR-BRAVE
+if "%browser%"=="6" goto CLEAR-ALL
+if "%browser%"=="7" goto MENU
 echo Invalid option.
 goto CLEAR-BROWSER-CACHE
 
@@ -607,6 +623,17 @@ del /f /s /q "%userprofile%\AppData\Local\Opera Software\Opera Stable\Cookies\*.
 echo Opera cache and cookies cleared successfully.
 timeout /t 5
 
+@REM MADE BY ME
+:CLEAR-BRAVE  
+@echo off
+color F0
+echo Clearing Brave cache and cookies
+echo.
+del /f /s /q "%userprofile%\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cache\*.*"
+del /f /s /q "%userprofile%\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cookies\*.*"
+echo Brave cache and cookies cleared successfully.
+timeout /t 5
+
 :CLEAR-ALL
 @echo off
 color F0
@@ -620,6 +647,8 @@ del /f /s /q "%userprofile%\AppData\Local\Microsoft\Edge\User Data\Default\Cache
 del /f /s /q "%userprofile%\AppData\Local\Microsoft\Edge\User Data\Default\Cookies\*.*"
 del /f /s /q "%userprofile%\AppData\Local\Opera Software\Opera Stable\Cache\*.*"
 del /f /s /q "%userprofile%\AppData\Local\Opera Software\Opera Stable\Cookies\*.*"
+del /f /s /q "%userprofile%\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cache\*.*"
+del /f /s /q "%userprofile%\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Cookies\*.*"
 echo All browser cache and cookies cleared successfully.
 timeout /t 5
 
